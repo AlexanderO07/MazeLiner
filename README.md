@@ -1,2 +1,2 @@
-# MazeLiner
-The Python project code generates a maze using a depth-first search (DFS) algorithm.      It prompts the user to enter the height and width of the maze, validates the input, and then      generates a random maze with paths and walls, allowing for customizable dimensions, and provides a visual representation of the maze on the console.
+# MazeLiner - Maze Generation Program
+For a comprehensive, in-depth explanation of each function, the imports used, and the overall design of the maze generation code, please refer to the 'BreakDown.md' file.
