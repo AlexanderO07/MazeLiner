@@ -46,15 +46,9 @@ def get_valid_input(prompt, min_value, max_value, ending_digit):
             print("\033[91mInvalid input. Please enter a valid integer.\033[0m")
 ```
 
-- Function Purpose: This function prompts the user to input a value, validates that the value is within a specified range (min_value to max_value), and checks that the value ends with a specific digit (ending_digit). 
-
-Key Elements: 
+- This function prompts the user to input a value, validates that the value is within a specified range (min_value to max_value), and checks that the value ends with a specific digit (ending_digit). 
 - while True: Creates an infinite loop that continues until the user provides valid input. 
-
 - try-except Block: Used to handle potential errors (like if the user inputs something that can't be converted to an integer). 
-
-### Input Validation: 
-
 - value = int(input(...)): Prompts the user for input and tries to convert it to an integer. 
 - if min_value <= value <= max_value and str(value)[-1] == str(ending_digit):: Checks that the input value is within the specified range and ends with the specified digit. 
 - return value: If the input is valid, the function returns the value. 
@@ -213,7 +207,7 @@ for row in extended_maze:
 ```
 - Displaying the Maze: This loop iterates through each row of the extended_maze and prints it. The join() method is used to concatenate the characters in each row into a single string, with spaces in between for better readability.
 
-# Rerun Function
+## Rerun Function
 ```python
 def rerun():
     global MAZE_WIDTH, MAZE_HEIGHT
@@ -246,13 +240,10 @@ rerun()
 ```
 - Purpose: This function allows the user to decide whether they want to generate another maze or exit the program. 
 - while True Loop: Keeps the prompt going until the user provides a valid input (Yes or No). 
-- Handling "Yes": 
-If the user chooses "Yes", the program prompts for new maze dimensions and regenerates the maze. 
+- Handling "Yes": If the user chooses "Yes", the program prompts for new maze dimensions and regenerates the maze. 
 -generate_maze(): You would need a separate function like generate_maze() that wraps the maze generation logic. This would involve initializing the maze, running DFS, and embedding it in the extended maze (as done earlier). 
--Handling "No": 
-If the user chooses "No", the program prints a goodbye message and exits the loop, effectively ending the program. 
--Error Handling: 
-If the user inputs anything other than "Yes" or "No", the program prints an error message and prompts the user again.
+- Handling "No": If the user chooses "No", the program prints a goodbye message and exits the loop, effectively ending the program. 
+- Error Handling: If the user inputs anything other than "Yes" or "No", the program prints an error message and prompts the user again.
 
 # What is a Depth-First-Search Algorithm?
 - Depth-First Search (DFS) is an algorithm used for traversing or searching tree or graph data structures. The algorithm starts at the root node (or an arbitrary node in the case of a graph) and explores as far as possible along each branch before backtracking.
@@ -263,7 +254,7 @@ DFS starts at the initial position (in this case, the start point of the maze).
 DFS explores each possible direction (up, down, left, right) randomly. 
 For each direction, DFS checks if the move is valid (i.e., it stays within bounds and moves to a wall). 
 If the move is valid, DFS carves a path in that direction and recursively calls itself on the new position. 
--Backtracking: 
+- Backtracking: 
 When DFS reaches a dead-end (i.e., no more valid moves like reaching the maze wall limit set by the user), it backtracks to the previous position and continues exploring any remaining directions. 
--Completion: 
+- Completion: 
 DFS continues this process until all cells are visited, resulting in a complete maze. 
